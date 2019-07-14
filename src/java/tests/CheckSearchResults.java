@@ -46,25 +46,4 @@ public class CheckSearchResults {
         searchPage.waitForSearchTerm();
         searchPage.checkSearchTerm(searchItemName);
     }
-
-    @Test
-    public void check_select_payment_methods() {
-        ProductItemsList productItemsList = new ProductItemsList(browser);
-        ProductPage productPage = new ProductPage(browser);
-        AddToCartModal addToCartModal = new AddToCartModal(browser);
-        ShoppingCart shoppingCart = new ShoppingCart(browser);
-
-        productItemsList.clickOnProduct(2);
-        productPage.waitProductToBeDisplayed();
-        productPage.clickOnAddToCart();
-        addToCartModal.waitAddToCartModalToBeDisplayed();
-        addToCartModal.clickOnAddToCart();
-        browser.findElement(By.cssSelector(".icon-button.-cart > div.icon > svg")).click();
-        shoppingCart.waitProceedToCheckoutToBePresent();
-        shoppingCart.clickProceedToCheckout();
-        shoppingCart.addUsername("alexlesanu95@gmail.com");
-        shoppingCart.addPassword("Alex123456");
-        shoppingCart.clickProceedToNextStep();
-        shoppingCart.clickProceedToNextStep();
-    }
 }
