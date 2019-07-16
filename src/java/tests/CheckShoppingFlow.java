@@ -13,7 +13,7 @@ public class CheckShoppingFlow {
 
     @Before
     public void before() {
-        System.setProperty("webdriver.chrome.driver", "/home/alesanu/Projects/Work/interview/UITesting/libs/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "./libs/chromedriver");
         browser = new ChromeDriver();
         browser.get("https://www.rakuten.de/");
 
