@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CookieModal;
 import pages.LoginPage;
 
-public class CheckFailedLogin {
+public class CheckFailedLogin extends JUnitHTMLReporter {
     WebDriver browser;
 
     @Before
